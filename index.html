@@ -3,30 +3,244 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World 🌍</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Clyst Hydon Swimming Club</title>
+    <style>
+        :root {
+            --primary: #00aaff;
+            --accent: #ffcc00;
+            --dark: #003366;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        header {
+            background: linear-gradient(rgba(0,170,255,0.85), rgba(0,51,102,0.85)), url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 120px 20px 80px;
+            position: relative;
+        }
+        .logo {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        .tagline {
+            font-size: 1.4rem;
+            opacity: 0.95;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 100;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        nav a {
+            display: block;
+            padding: 15px 20px;
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: var(--primary); }
+        
+        section {
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--dark);
+        }
+        .about {
+            background: white;
+            text-align: center;
+        }
+        .about p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        .hours, .prices, .photos {
+            background: #f0f8ff;
+        }
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            margin: 20px auto;
+            max-width: 500px;
+            text-align: center;
+        }
+        .highlight {
+            color: var(--accent);
+            font-weight: bold;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 20px 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0,170,255,0.3);
+        }
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120"><path fill="%23ffffff" fill-opacity="1" d="M0,64L48,80C96,96,192,128,288,122.7C384,117,480,75,576,69.3C672,64,768,96,864,112C960,128,1056,128,1152,112C1248,96,1344,64,1392,48L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"></path></svg>') bottom/cover;
+        }
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .playful-dot {
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        .social-link {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .social-link:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Hello World!</h1>
-        <p class="subtitle">My first website deployed with GitHub + Cloudflare Pages</p>
-        
+
+    <header>
+        <div class="logo">Clyst Hydon 🏊‍♂️</div>
+        <p class="tagline">Your friendly community outdoor swimming pool in Devon</p>
+        <div class="wave"></div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#hours">Opening Hours</a></li>
+            <li><a href="#prices">Prices</a></li>
+            <li><a href="#find">Find Us</a></li>
+            <li><a href="#photos">Photos</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="about">
+        <h2>Welcome to the Pool! <span class="playful-dot">🌊</span></h2>
+        <p>Clyst Hydon Swimming Club is a volunteer-run outdoor pool nestled in the beautiful Devon countryside. Open to everyone — come for a refreshing dip, meet friends, or just enjoy the sun on the grass.</p>
+        <p>The pool is unheated and lovingly maintained by local volunteers. Swim is optional — just come and enjoy the community spirit!</p>
+        <a href="#hours" class="btn">See when we're open</a>
+    </section>
+
+    <section id="hours" class="hours">
+        <h2>Opening Hours</h2>
         <div class="card">
-            <p>🚀 This page is being served from:</p>
-            <ul>
-                <li>Local folder → GitHub</li>
-                <li>GitHub → Cloudflare Pages</li>
-                <li>Cloudflare → The internet</li>
-            </ul>
+            <p><strong>Every day until end of season:</strong></p>
+            <p style="font-size:1.8rem; margin:20px 0;">14:30 – 19:00</p>
+            <p>Check our Facebook page or contact us for any changes (weather, special events, etc.).</p>
         </div>
+    </section>
 
-        <button onclick="sayHello()">Say Hello 👋</button>
+    <section id="prices">
+        <h2>Prices & Membership</h2>
+        <div class="card">
+            <p><strong>Day Ticket:</strong> £3.00 per person</p>
+            <p><strong>Season Ticket:</strong> £30.00 per individual</p>
+            <p class="highlight">Pre-schoolers & non-swimmers (with a swimmer): Free</p>
+            <p>We accept cash, card (contactless), cheque or BACS.</p>
+            <p style="margin-top:20px;">Everyone on site must be a member — forms available on request.</p>
+        </div>
+    </section>
+
+    <section id="find" style="background:#f0f8ff;">
+        <h2>Find Us</h2>
+        <div class="card">
+            <p><strong>Clyst Hydon Swimming Pool</strong><br>
+            Near Cullompton<br>
+            Devon EX15 2NT</p>
+            <p>Parking available at the nearby Five Bells Inn (short walk).</p>
+        </div>
+    </section>
+
+    <section id="photos" class="photos">
+        <h2>Photos & Updates</h2>
+        <div class="card">
+            <p>See the latest photos of the pool, sunny days, and happy swimmers on our Facebook page.</p>
+            <p style="margin: 25px 0;">
+                <a href="https://www.facebook.com/ClystHydonSwim/" target="_blank" class="social-link">
+                    👉 Visit our Facebook page for photos and latest news
+                </a>
+            </p>
+            <p>We'll keep it updated regularly during the swimming season!</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <div class="card">
+            <p><strong>Email us at:</strong></p>
+            <p style="font-size: 1.3rem; margin: 20px 0;">
+                <a href="mailto:hello@clysthydonswimmingclub.org.uk" style="color: var(--primary); text-decoration: none;">
+                    hello@clysthydonswimmingclub.org.uk
+                </a>
+            </p>
+            <p>We usually reply within a day or two.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Clyst Hydon Swimming Club — A community-run volunteer project ❤️</p>
+        <p>Made with care for local swimmers</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href').length > 1) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
         
-        <footer>
-            <p>Made with ❤️ using GitHub Desktop + Cloudflare</p>
-        </footer>
-    </div>
-
-    <script src="script.js"></script>
+        console.log("🌊 Clyst Hydon Swimming Club website ready!");
+    </script>
 </body>
 </html>
