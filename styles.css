@@ -304,3 +304,8 @@ footer {
 .messenger:hover {
   background-color: #006FDB;
 }
+
+.map-container iframe {
+    width: 100%;
+    border-radius: 15px;
+}
