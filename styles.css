@@ -240,3 +240,67 @@ footer {
 .event-image-bottom {
     object-position: bottom;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contact-section {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.contact-btn img {
+  width: 20px;
+  height: 20px;
+    filter: invert(1);
+
+}
+
+.email {
+  background-color: #0078D4; /* Microsoft blue */
+}
+
+.email:hover {
+  background-color: #005A9E;
+}
+
+.messenger {
+  background-color: #0084FF; /* Messenger blue */
+}
+
+.messenger:hover {
+  background-color: #006FDB;
+}
